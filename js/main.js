@@ -4,6 +4,14 @@ const links = [
   {
     label: "Week01",
     url: "week01/story_editor.html"
+  },
+  /*{
+    label: "Week02 / Team Activity",
+    url: "week02/teamActivity/index.html"
+  },*/
+  {
+    label: "Week02 / Quiz Ninja",
+    url: "week02/quizNinja/index.html"
   }
 ]
 

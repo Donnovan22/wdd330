@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week02 Team Activity</title>
+
+</head>
+<body>
+  <main>
+    <div>
+      <h1>1</h1>
+      <p>Type a number to sum all the numbers up to the number provided</p>
+      <input id="input" type="text"> 
+      <button onclick="readContent()">Submit</button>
+      <p>Result: <span id="div1"></span></p>
+    </div>
+    <div>
+      <h2>2</h2>
+      <p>Adding Machine: Type two numbers to add them together</p>
+      <input id="first_input" type="text"> <br>
+      <input id="second_input" type="text"> 
+      <button onclick="addFunction()">+</button>
+      <p>Result: <span id="div2"></span></p>
+    </div>
+    <div>
+      <h2>3</h2>
+      <p>Multiplication</p>
+      <input id="first_value" type="text"> <br>
+      <input id="second_value" type="text"> 
+      <button onclick="multiplicationFunction()">*</button>
+      <p>Result: <span id="div3"></span></p>
+    </div>
+  </main>
+  <script>
+    function readContent(){
+      let user_input = document.querySelector("#input").value;
+      let expected_output = sumFuntion(user_input);
+      let div = document.querySelector("#div1");
+      div.textContent = expected_output;
+    }
+
+    function sumFuntion(value){
+      let array = [];
+      for (let i = 0; i <= value; i++) {
+        array.push(i);
+      }
+     return array.reduce((a,b) => a + b)
+    }
+
+    function addFunction(value_1, value_2){
+      let first_value = document.querySelector("#first_input").value;
+      let second_value = document.querySelector("#second_input").value;
+      let result = parseInt(first_value, 10) + parseInt(second_value, 10);
+      let div = document.querySelector("#div2");
+      div.textContent = result;
+    }
+
+    function multiplicationFunction() {
+      let first_value = document.querySelector("#first_value").value;
+      let second_value = document.querySelector("#second_value").value;
+      let result = parseInt(first_value, 10) * parseInt(second_value, 10);
+      let div = document.querySelector("#div3");
+      div.textContent = result;
+    }
+
+
+  </script>
+</body>
+</html>
