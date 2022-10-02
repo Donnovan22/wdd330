@@ -1,0 +1,56 @@
+body{
+  margin: 0 auto;
+  width: 800px;
+  font-family: 'Bree Serif', serif;
+  background-color: azure;
+}
+header{
+  text-align: center;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+  box-shadow: 0 0 10px 0  black;
+  border-radius: 15px;
+  margin-top: 15px;
+  color: black;
+  font-weight: bolder;
+}
+
+header div {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: beige;
+  border-radius: 15px;
+}
+main{
+  margin-top: 15px;
+  padding: 25px;
+  background-color: lightblue;
+  box-shadow: 0 0 10px 0  black;
+  border-radius: 15px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  gap: 1rem;
+  background-color: beige;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0  black;
+}
+
+.title{
+  text-align: center;
+  background-color: beige;
+  border-radius: 15px;
+}
