@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 500px;
+  gap: 1rem;
+  background-color: cornflowerblue;
+  color: black;
+  padding: 50px;
+}
+
+.container div {
+  display: flex;
+  text-align: center;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: aqua;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: bold;
+}

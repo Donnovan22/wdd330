@@ -20,13 +20,25 @@ const links = [
   {
     label: "Week03 / Quiz Ninja",
     url: "week03/quizNinja/index.html"
+  },
+  {
+    label: "Week04 / Forms",
+    url: "week04/forms/hero.html"
+  },
+  {
+    label: "Week04 / Quiz Ninja",
+    url: "week04/quizNinja/index.html"
+  },
+  {
+    label: "Week04 / Team Activity",
+    url: "week04/teamActivity/index.html"
   }
 ]
 
 function addElementToOl() {
   links.forEach(element => {
     const li = document.createElement("li");
-    li.innerHTML = `<a target=_blank href="${element.url}">${element.label}</a>`;  
+    li.innerHTML = `<a target=_blank href="${element.url}">${element.label}</a>`;
     ol.append(li);
   });
 };
