@@ -32,6 +32,14 @@ const links = [
   {
     label: "Week04 / Team Activity",
     url: "week04/teamActivity/index.html"
+  },
+  {
+    label: "Week05 / Quiz Ninja",
+    url: "week05/quizNinja/index.html"
+  },
+  {
+    label: "Week05 / Team Activity",
+    url: "week05/teamActivity/index.html"
   }
 ]
 
