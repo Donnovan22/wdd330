@@ -1,3 +1,5 @@
+import ToDoController from "./toDoController.js";
+
 const ol = document.querySelector(".list");
 
 const links = [
@@ -53,3 +55,6 @@ function addElementToOl() {
 
 console.log(links);
 addElementToOl();
+
+const toDoController = new ToDoController("todoList");
+toDoController.showToDoList();
