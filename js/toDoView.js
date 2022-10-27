@@ -3,9 +3,10 @@ export default class ToDoView {
 
     }
 
-    renderToDoList(toDoList, listElement){
-        toDoList.forEach(toDoModel => {
-            listElement.appendChild(this.renderOneToDoElement(toDoModel));
+    renderToDoList(toDoList, parentElement){
+        parentElement.innerHTML = "";
+        toDoList.forEach(toDoModel => {          
+            parentElement.appendChild(this.renderOneToDoElement(toDoModel));
         });
     }
 
@@ -16,6 +17,7 @@ export default class ToDoView {
         <span>${toDoModel.text}</span>
         <button id="deleteToDoElement">Delete</button>
         `;
+
         return toDoElement;
     }
 }

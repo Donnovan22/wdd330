@@ -2,56 +2,65 @@ import ToDoModel from "./toDoModel.js";
 import ToDoView from "./toDoView.js";
 
 export default class ToDoController {
-    constructor(parentId){
-       this.parentElement = document.getElementById(parentId);
-       
-       this.toDoView = new ToDoView(parentId);
-       
+    constructor(parentElement){
+        this.parentElement = document.getElementById(parentElement);
+        this.toDoView = new ToDoView();    
+        this.toDoList = [];
     }
     
-    createToDoList(){
-        let toDoList = [];
-
-        let toDoModel = new ToDoModel("1", "task1", false);
-        let toDoModel2 = new ToDoModel("2", "task2", false);
-        let toDoModel3 = new ToDoModel("3", "task3", false);
-        let toDoModel4 = new ToDoModel("4", "task4", false);
-
-        toDoList.push(toDoModel, toDoModel2, toDoModel3, toDoModel4);
-
-        return toDoList;
-    }
-
     showToDoList(){
-        this.toDoView.renderToDoList(this.createToDoList(), this.parentElement);
+        this.readFromLocalStorage(); 
+        this.saveToDoModel();
+        //localStorage.clear();
     }
 
     showFooter(){
-
+        // pending..
     }
 
-    addToDoModel(){
-
+    writeToLocalStorage(toDoList) {
+        localStorage.setItem("toDoList", JSON.stringify(toDoList));
+        this.toDoView.renderToDoList(toDoList, this.parentElement);
     }
 
-    getToDoModel(){
+    readFromLocalStorage(){
+        const array = localStorage.getItem("toDoList");
+        if (array){
+            this.toDoList = JSON.parse(array);
+            this.toDoView.renderToDoList(this.toDoList, this.parentElement);
+        }
+    }
 
+    addToDoModel(text){
+        let toDoModel = new ToDoModel(Date.now(), text, false);
+        this.toDoList.push(toDoModel);
+        this.writeToLocalStorage(this.toDoList);
+        console.log(toDoModel);
     }
 
     saveToDoModel(){
-
+        const button = document.querySelector("#addButton");
+        button.addEventListener("click", event => {
+            event.preventDefault();
+            const userInput = document.querySelector("#userInput");
+            const text = userInput.value.trim();
+            if(text !== ""){
+                this.addToDoModel(text);
+                userInput.value = "";    
+                userInput.focus();        
+            }});
     }
 
     completeToDoElement(){
-
+        // pending..
     }
 
     removeToDoElement(){
-
+        // pending..
     }
 
     filterToDoList(){
-
+        // pending..
     }
 
 }
