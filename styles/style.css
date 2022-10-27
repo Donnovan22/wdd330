@@ -2,14 +2,15 @@ body{
   margin: 0 auto;
   width: 800px;
   font-family: 'Bree Serif', serif;
-  background-color: azure;
+  background-color: blanchedalmond;
 }
 header{
   text-align: center;
-  background-color: lightblue;
+  background-color: chocolate;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
   box-shadow: 0 0 10px 0  black;
   border-radius: 15px;
@@ -28,7 +29,7 @@ header div {
 main{
   margin-top: 15px;
   padding: 25px;
-  background-color: lightblue;
+  background-color: chocolate;
   box-shadow: 0 0 10px 0  black;
   border-radius: 15px;
   display: flex;
@@ -54,11 +55,39 @@ main{
   box-shadow: 0 0 10px 0  black;
 }
 
+.main-title{
+  background-color: chocolate;
+  color: beige;
+  font-size: 1.2rem;
+}
+
 .title{
   text-align: center;
   background-color: beige;
   padding: 15px;
   border-radius: 15px;
+}
+
+#userInput {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#userInput:hover {
+  background-color: beige;
+}
+
+#addButton {
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+#addButton:hover {
+  box-shadow: 0 0 5px 0 black;
+}
+
+button:hover {
+  box-shadow: 0 0 5px 0 black;
 }
 
 /* TO DO PART */
@@ -68,19 +97,19 @@ main{
   flex-direction: column;
   gap: 0.5rem;
   text-align: center;
-  background-color: white;
+  background-color: beige;
   width: 300px;
   padding: 20px;
   padding-bottom: 30px;
-  border: 2px dashed black;
+  border-radius: 15px;
 }
 
 .todoForm h1 {
-  background-color: white;
+  background-color: beige;
 }
 
 .todoForm #todoList {
-  border: 2px solid black;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -100,4 +129,13 @@ main{
 
 .todoForm #addTask{
   padding: 5px;
+}
+
+.footer-div {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  justify-content: space-between;
+  font-size: 0.8rem;
 }
