@@ -34,12 +34,32 @@ export default class ToDoView {
         footer.setAttribute("class", "footer-div");
         footer.innerHTML = `
         <span id="counter">- tasks left</span>
-        <button id="all">All</button>
-        <button id="active">Active</button>
-        <button id="completed">Completed</button>
+        <button class="allButton">All</button>
+        <button class="activeButton">Incomplete</button>
+        <button class="completedButton">Complete</button>
         `;
 
         parentElement.appendChild(footer);
+    }
+
+    renderCompleteView(toDoList, parentElement) {
+        parentElement.innerHTML = "";
+        toDoList.forEach(toDoModel => {   
+            if(toDoModel.bolean === true){
+                const checked = toDoModel.bolean ? 'checked': null;    
+                parentElement.appendChild(this.renderOneToDoElement(toDoModel, checked));
+            }    
+        });
+    }
+
+    renderIncompleView(toDoList, parentElement) {
+        parentElement.innerHTML = "";
+        toDoList.forEach(toDoModel => {
+            if(toDoModel.bolean === false) {
+                const checked = toDoModel.bolean ? "checked": null;
+                parentElement.appendChild(this.renderOneToDoElement(toDoModel, checked));
+            }
+        });
     }
 
   }

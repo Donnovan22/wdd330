@@ -55,21 +55,28 @@ export default class ToDoController {
 
     toDoListInteraction(){
         this.parentElement.addEventListener("click", event =>{
-            if (event.target.type === "checkbox") {this.toggle(event.target.parentElement.getAttribute("data-key"));}
-            if (event.target.classList.contains("deleteButton")) {this.removeToDoElement(event.target.parentElement.getAttribute("data-key"));}
+            if(event.target.type === "checkbox") {this.toggle(event.target.parentElement.getAttribute("data-key"));}
+            if(event.target.classList.contains("deleteButton")) {this.removeToDoElement(event.target.parentElement.getAttribute("data-key"));}
+            if(event.target.classList.contains("completedButton")) {this.filterCompletedTasks()};
+            if(event.target.classList.contains("activeButton")) {this.filterActiveTasks()};
+            if(event.target.classList.contains("allButton")) {this.filterAllTasks()};
         });
+        this.filterCompletedTasks();
     }
 
     filterActiveTasks(){
-        // pending..
+        this.toDoView.renderIncompleView(this.toDoList, this.parentElement);
+        this.showFooter();
     }
 
     filterCompletedTasks(){
-        // pending..
+        this.toDoView.renderCompleteView(this.toDoList, this.parentElement);
+        this.showFooter();
     }
 
-    filterAllToDoElements(){
-        // pending..
+    filterAllTasks(){
+        this.toDoView.renderToDoList(this.toDoList, this.parentElement);
+        this.showFooter();
     }
 
     removeToDoElement(id){
