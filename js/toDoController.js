@@ -16,6 +16,7 @@ export default class ToDoController {
 
     showFooter(){
         this.toDoView.renderFooter(this.parentElement);
+        this.counter();
     }
 
     readFromLocalStorage(){
@@ -93,5 +94,19 @@ export default class ToDoController {
             }
           });
         this.writeToLocalStorage(this.toDoList);
+    }
+
+    counter(){
+        let array = localStorage.getItem("toDoList");
+        let newarray =JSON.parse(array);
+        let counter = document.querySelector("#counter");
+        let i = 0;
+
+        newarray.forEach(element => {
+            if(element.bolean === false){
+                i++;
+                counter.textContent = i;
+            } 
+        })
     }
 }

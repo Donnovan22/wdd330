@@ -33,8 +33,8 @@ export default class ToDoView {
         const footer = document.createElement("div");
         footer.setAttribute("class", "footer-div");
         footer.innerHTML = `
-        <span id="counter">- tasks left</span>
-        <button class="allButton">All</button>
+        <p><span id="counter">0 </span> tasks left</p>
+        <button class="allButton">View All</button>
         <button class="activeButton">Incomplete</button>
         <button class="completedButton">Complete</button>
         `;
