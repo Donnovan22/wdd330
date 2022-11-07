@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+    justify-content: center;
+}
+
+h1 {
+    padding: 20px;
+    border: 2px dashed skyblue;
+    margin-top: 150px;
+    width: 500px;
+}
+
+h1 span {
+    transition-property: transform, color;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.5s;
+    font-size: 50px;
+    color: #999999;
+    display: inline-block;
+}
+
+/*h1 span {
+    transition: transform 2s ease-out 0.5s;
+    font-size: 50px;
+    color: #999999;
+    display: inline-block;
+}*/
+
+h1:hover span {
+    color: skyblue;  
+    transform: rotate(360deg) translateX(50px) scale(1.5);
+   /* animation-name: myAnimation;
+    animation-duration: 3000ms;*/
+}
+
+/*@keyframes myAnimation { 
+    from {
+        transform: translateX(-50%);
+        }
+        to {
+        transform: translateX(50%);
+        }
+}*/
