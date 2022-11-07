@@ -1,0 +1,13 @@
+.card{
+    border: 1px solid black;
+    padding: 1%;
+    text-align: center;
+    margin-top:1%;
+}
+#app{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: center;
+    
+}
