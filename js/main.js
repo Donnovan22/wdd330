@@ -58,6 +58,10 @@ const links = [
   {
     label: "Week09 / Team Activity",
     url: "week09/teamActivity/index-START.html"
+  },
+  {
+    label: "Week09 / Block2 Challenge Proposals",
+    url: "week09/proposal/index.html"
   }
 ]
 
