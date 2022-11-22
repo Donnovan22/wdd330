@@ -57,7 +57,7 @@ const links = [
   },
   {
     label: "Week09 / Readings",
-    url: "week09/reading/index.html"
+    url: "week09/reading/quizNinja/index.html"
   },
   {
     label: "Week09 / Team Activity",
@@ -66,6 +66,10 @@ const links = [
   {
     label: "Week09 / Block2 Challenge Proposals",
     url: "week09/proposal/index.html"
+  },
+  {
+    label: "Week10 / Readings",
+    url: "week10/reading/index.html"
   }
 ]
 
