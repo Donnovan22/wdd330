@@ -1,5 +1,5 @@
-export default class CurrenciView {
+export default class CurrencyView {
     constructor(){
-        
+
     }
 }
