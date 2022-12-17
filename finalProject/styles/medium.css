@@ -1,0 +1,13 @@
+@media only screen and (min-width: 800px) {
+    .currency-list-container{
+        flex-direction: row;
+        margin: 0 0 25px 0;
+      }
+
+      .form-container {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+      }
+      
+}

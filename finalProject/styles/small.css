@@ -1,3 +1,75 @@
 body{
     font-family: 'Bree Serif', serif;
-  }
+
+}
+
+header{
+  background-color: #0C2D48;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+footer {
+  background-color: #0C2D48;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  padding: 20px;
+  margin: 0 10% 0 10%;
+  background-color: white;
+}
+
+.form-container{
+  border: 1px solid rgb(153, 153, 153);
+  text-align: center;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 20px 10px 20px;
+  background-color: white;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.currency-list-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+#info-list {
+  width: 200px;
+}
+
+.table-currency {
+  gap: 1rem;
+  text-align: left;
+  display: block;
+  height: 350px;
+  overflow-y: scroll;
+}
+
+.table-currency, th, td {
+  border: 1px solid;
+}
+
+#calculate-button{
+  background-color: #0C2D48;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: transparent;
+}
