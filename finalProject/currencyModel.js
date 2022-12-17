@@ -10,7 +10,7 @@ export default class CurrencyModel {
 
     loadData(){
         this.data = JSON.parse(localStorage.getItem('currency_list'));
-        this.currencyModel.requestListOfCurrencies();
+        this.requestListOfCurrencies();
         this.keys = Object.keys(this.data.currencies);
     }
 
