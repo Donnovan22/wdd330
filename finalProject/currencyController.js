@@ -10,7 +10,7 @@ export default class CurrencyController {
     }
 
     displayInterface(){
-       
+        this.currencyModel.requestListOfCurrencies();
         this.currencyView.mainBuild(this.currencyList.currencies, this.keys);
         this.handleConversion();
         
